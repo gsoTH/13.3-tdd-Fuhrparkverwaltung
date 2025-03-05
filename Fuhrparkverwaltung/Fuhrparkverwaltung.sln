@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuhrparkverwaltung", "Fuhrparkverwaltung\Fuhrparkverwaltung.csproj", "{A5D54F84-6A48-46FB-99B7-F85488B26AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuhrparkverwaltungTests", "FuhrparkverwaltungTests\FuhrparkverwaltungTests.csproj", "{04E0D352-03A1-4738-845F-307761341616}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D54F84-6A48-46FB-99B7-F85488B26AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D54F84-6A48-46FB-99B7-F85488B26AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D54F84-6A48-46FB-99B7-F85488B26AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D54F84-6A48-46FB-99B7-F85488B26AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E0D352-03A1-4738-845F-307761341616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E0D352-03A1-4738-845F-307761341616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E0D352-03A1-4738-845F-307761341616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E0D352-03A1-4738-845F-307761341616}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
