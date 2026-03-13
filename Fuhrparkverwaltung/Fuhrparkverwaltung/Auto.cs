@@ -26,7 +26,16 @@ public class Auto
     {
         if (streckeInKilometern > 0)
         {
-            tankinhaltInLitern -= streckeInKilometern*(verbrauchPro100Km/100);
+            double verbraucht = streckeInKilometern * (verbrauchPro100Km / 100);
+            
+            if (verbraucht <= tankinhaltInLitern)
+            {
+                tankinhaltInLitern -= verbraucht;
+            }
+            else
+            {
+                tankinhaltInLitern = 0;
+            }
             kilometerstand += streckeInKilometern;
         }
     }
