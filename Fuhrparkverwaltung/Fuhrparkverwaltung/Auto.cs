@@ -13,6 +13,9 @@ public class Auto
 
     public void Fahren(int streckeInKilometern)
     {
-        this.kilometerstand += streckeInKilometern;
+        if (streckeInKilometern > 0)
+        {
+            this.kilometerstand += streckeInKilometern;
+        }
     }
 }

@@ -17,7 +17,6 @@ namespace FuhrparkverwaltungTests
             
             // Assert
             Assert.AreEqual(kilometerstand, a.Kilometerstand);
-            
         }
         
         [TestMethod]
@@ -32,6 +31,19 @@ namespace FuhrparkverwaltungTests
             
             // Assert
             Assert.AreEqual(60, a.Kilometerstand);
+        }
+        
+        [TestMethod]
+        public void Fahren_negativeStreckeWirdIgnoriert()
+        {
+            // Arrange
+            Auto a = new Auto(10);
+            
+            // Act
+            a.Fahren(-1);
+            
+            // Assert
+            Assert.AreEqual(10, a.Kilometerstand);
         }
     }
 }
