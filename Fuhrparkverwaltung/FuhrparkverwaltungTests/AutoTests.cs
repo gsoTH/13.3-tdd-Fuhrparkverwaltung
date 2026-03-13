@@ -19,6 +19,24 @@ namespace FuhrparkverwaltungTests
             Assert.AreEqual(kilometerstand, a.Kilometerstand);
         }
         
+        
+        [TestMethod] public void Auto_kannErzeugtWerdentMitKilometerstandTankinhaltVerbrauch() 
+        {
+            // Arrange
+            int kilometerstand = 10;
+            double tankinhaltInLitern = 40;
+            double verbrauchPro100Km = 5.3;
+            
+            // Act
+            Auto a = new Auto(kilometerstand, tankinhaltInLitern, verbrauchPro100Km);
+
+            // Assert
+            Assert.AreEqual(kilometerstand, a.Kilometerstand);
+            Assert.AreEqual(tankinhaltInLitern, a.TankinhaltInLitern);
+            Assert.AreEqual(verbrauchPro100Km, a.VerbrauchPro100Km);
+        }
+
+        
         [TestMethod]
         public void Fahren_steigertKilometerstand()
         {
@@ -33,6 +51,7 @@ namespace FuhrparkverwaltungTests
             Assert.AreEqual(60, a.Kilometerstand);
         }
         
+        
         [TestMethod]
         public void Fahren_negativeStreckeWirdIgnoriert()
         {
@@ -44,6 +63,22 @@ namespace FuhrparkverwaltungTests
             
             // Assert
             Assert.AreEqual(10, a.Kilometerstand);
+        }
+        
+        [TestMethod]
+        public void Fahren_senktTankinhaltEntsprechendVerbrauch() 
+        {
+            //Arrange
+            int kilometerstand = 10;
+            double tankinhaltInLitern = 10.0;
+            double verbrauchPro100Km = 5.7;
+            Auto a = new Auto(kilometerstand,tankinhaltInLitern,verbrauchPro100Km);
+
+            //Act
+            a.Fahren(100);
+
+            //Assert
+            Assert.AreEqual(4.3, a.TankinhaltInLitern);
         }
     }
 }
