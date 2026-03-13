@@ -5,12 +5,27 @@ namespace FuhrparkverwaltungTests
     [TestClass]
     public class AutoTests
     {
+
+        [TestMethod]
+        public void Auto_kannErstelltWerden()
+        {
+            // Arrange
+            int kilometerstand = 10;
+            
+            // Act
+            Auto a = new Auto(kilometerstand);
+            
+            
+            // Assert
+            Assert.AreEqual(kilometerstand, a.Kilometerstand);
+            
+        }
+        
         [TestMethod]
         public void Fahren_steigertKilometerstand()
         {
             // Arrange
-            int kilometerstand = 10;
-            Auto a = new Auto(kilometerstand);
+            Auto a = new Auto(10);
             int streckeInKilometern = 50;
             
             // Act
