@@ -15,7 +15,6 @@ namespace FuhrparkverwaltungTests
             // Act
             Auto a = new Auto(kilometerstand);
             
-            
             // Assert
             Assert.AreEqual(kilometerstand, a.Kilometerstand);
             
