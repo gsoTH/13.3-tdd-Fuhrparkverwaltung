@@ -31,12 +31,14 @@ public class Auto
             if (verbraucht <= tankinhaltInLitern)
             {
                 tankinhaltInLitern -= verbraucht;
+                kilometerstand += streckeInKilometern;
             }
             else
             {
+                double maxStrecke = (tankinhaltInLitern / verbrauchPro100Km) * 100;
+                kilometerstand += Convert.ToInt32(maxStrecke);
                 tankinhaltInLitern = 0;
             }
-            kilometerstand += streckeInKilometern;
         }
     }
 }

@@ -96,6 +96,22 @@ namespace FuhrparkverwaltungTests
             //Assert
             Assert.AreEqual(0, a.TankinhaltInLitern);
         }
+        
+        [TestMethod]
+        public void Fahren_nurSoWeitDerTankReicht() 
+        {
+            //Arrange
+            int kilometerstand = 0;
+            double tankinhaltInLitern = 8.0;
+            double verbrauchPro100Km = 10.0;
+            Auto a = new Auto(kilometerstand,tankinhaltInLitern,verbrauchPro100Km);
+
+            //Act
+            a.Fahren(100);
+
+            //Assert
+            Assert.AreEqual(80, a.Kilometerstand);
+        }
     }
 }
 
